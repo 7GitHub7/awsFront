@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.0/angular-material.min.css">
+
+
+</head>
+
+<body>
+  <!-- AngularJS Material Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-messages.min.js"></script>
+
+  <!-- AngularJS Material Javascript now available via Google CDN; version 1.2.0 used here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.0/angular-material.min.js"></script>
+
+<!-- 
+  <form id="formElem">
+    
+    Picture:
+    <input type="file" name="picture" accept="image/*">
+    <input type="submit">
+  </form> -->
+
+  <input type="file" id="file-input" >
+
+
+  <div ng-controller="AppCtrl" ng-cloak="" ng-app="MyApp">
+
+
+    <md-content>
+      <md-list>
+        <md-list-item class="md-3-line" ng-class="{selectedIndex: list.includes($index)}" ng-repeat="item in todos"
+          ng-click="fnReviewEmployeeId($index)">
+          <!-- <md-checkbox class="md-secondary">asd</md-checkbox> -->
+          <!-- <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}"> -->
+          <!-- <div class="md-list-item-text" layout="column"> -->
+          <h3>{{item}}</h3>
+          <!-- <h4>{{ item.what }}</h4> -->
+          <!-- <p>{{ item.notes }}</p> -->
+          <!-- </div> -->
+          <md-divider></md-divider>
+        </md-list-item>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <md-button id="transform" class="md-raised">Obróć</md-button>
+          <md-button id="buff" class="md-raised md-primary">Pobierz</md-button>
+
+        </section>
+
+
+  </div>
+  <md-content>
+
+  </md-content>
+
+
+
+  <script type="text/javascript">
+    (function () {
+      var script = document.createElement("script");
+      script.src = './main.js';
+      script.type = 'module';
+      script.onload = function (data) { };
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+
+  </script>
+
+
+  <script src="client.js" type="module"></script>
+</body>
+
+</html>
